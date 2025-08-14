@@ -22,3 +22,6 @@ yarn-error.log*
 
 # Ignorar pastas de cache
 .cache/
+
+# Ignorar pastas geradas pela IDE
+.idea/
