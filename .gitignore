@@ -1,0 +1,24 @@
+# Ignorar pastas node_modules em todos os subdiretórios
+node_modules/
+
+# Ignorar package-lock.json em todos os subdiretórios
+package-lock.json
+
+# Ignorar arquivos de build (ex.: React)
+build/
+dist/
+
+# Ignorar arquivos de ambiente
+.env
+.env.local
+.env.development
+.env.production
+
+# Ignorar logs e temporários
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignorar pastas de cache
+.cache/
