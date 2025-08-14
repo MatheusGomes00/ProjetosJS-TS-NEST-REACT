@@ -65,9 +65,12 @@ let vendas = [
     { nomeVendedor: 'Pedro', valorVenda: 100, data: '14-08-2025', id: 8 },
 ];
 
+const delay = (ms) => new Promise((resolve) => (setTimeout(resolve, ms)));
+
 
 async function adicionarVenda() {
-    const nomeVendedor = await question("Nome Cliente: ");
+
+    const nomeVendedor = await question("Nome Vendedor: ");
     if (nomeVendedor.trim() === "") {
         console.log("Erro: Nome do cliente deve ser uma string não vazia\n");
         return;
@@ -89,6 +92,7 @@ async function adicionarVenda() {
         id: vendas.length + 1
     }
     vendas.push(venda);
+    await delay(3000);
     console.log(`\nVenda adicionada: ${nomeVendedor} - R$${valorVenda} em ${data}`);
 }
 
