@@ -1,5 +1,6 @@
 import express from "express";
 import * as service from "../service/vendaService.js"
+import {buscarVendasPorVendedor} from "../service/vendaService.js";
 
 const router = express.Router();
 
@@ -7,14 +8,16 @@ router.get("/listar", service.listarVendas);
 
 router.post("/adicionar/:vendedorId", service.adicionarVenda);
 
-//router.get("/buscar/:codigo", service.buscarVenda);
+router.get("/buscar/:codigoVenda", service.buscarVenda);
 
-//router.get("/calc-total", service.calcTotalVendas);
+router.get("/vendedor/:vendedorId", service.buscarVendasPorVendedor);
 
-//router.post("/filtrar-valor", service.filtrarVendas);
+router.get("/calc-total", service.calcTotalVendas);
 
-//router.put("/editar/:codigo", service.editarVenda);
+router.post("/filtrar-valor", service.filtrarVendas);
 
-//router.delete("/remover/:codigo", service.removerVenda);
+router.put("/editar/:codigoVenda", service.editarVenda);
+
+router.delete("/remover/:codigoVenda", service.removerVenda);
 
 export default router;

@@ -13,3 +13,4 @@ export async function cadastrarVendedor(req, res) {
     }
 
 }
+

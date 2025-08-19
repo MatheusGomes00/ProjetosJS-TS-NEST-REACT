@@ -13,8 +13,8 @@ const iniciarServidor = async () => {
         await dbConfig();
         app.use(express.json());
 
-        app.use("/vendas", vendasRoutes);
-        app.use("/vendedor", vendedorRoutes);
+        app.use("/api/vendas", vendasRoutes);
+        app.use("/api/vendedor", vendedorRoutes);
 
 
         app.listen(PORT, () => {

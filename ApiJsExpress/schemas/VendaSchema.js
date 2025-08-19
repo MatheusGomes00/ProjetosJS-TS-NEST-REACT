@@ -21,14 +21,15 @@ const Venda = new Schema({
         type: String,
         required: [true, "Categoria da venda é obrigatório."],
         enum: {
-            values: ["Carro", "Moto", "Mobiliario", "Caminhao", "Aviao", "Seguro"],
-            message: "enum validator failed for path `{PATH}` with value `{VALUE}`.",
+            values: ["Carro", "Moto", "Imobiliario", "Caminhao", "Aviao", "Seguro"],
+            message: "Falha ao validar enum `{PATH}` valor `{VALUE}` não existe.",
         },
     },
     valorVenda: {
         type: Number,
         required: [true, "Valor da venda é obrigatório."],
     },
+
     dataVenda: {
         type: Date,
         required: true,
@@ -36,4 +37,5 @@ const Venda = new Schema({
     },
 });
 
+// exporta o schema como modelo/entidade para manipulação e persistencia
 export default mongoose.model('Venda', Venda);
