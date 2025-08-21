@@ -1,0 +1,513 @@
+type: collection.insomnia.rest/5.0
+name: JS Collections
+meta:
+  id: wrk_5e96577bd6114a53bc4cb49ef7ab3d9a
+  created: 1716000456218
+  modified: 1755731510236
+  description: ""
+collection:
+  - name: CRUD1
+    meta:
+      id: fld_800f6378af7a4383ac13e8fe6589520f
+      created: 1755027226631
+      modified: 1755027226631
+      sortKey: -1755027226631
+      description: ""
+    children:
+      - url: http://localhost:5001/api/itens
+        name: Buscar itens
+        meta:
+          id: req_2889f4e0de5d4ff186dc7bbad45df5dc
+          created: 1755027228893
+          modified: 1755027860645
+          isPrivate: false
+          description: ""
+          sortKey: -1755027228893
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5001/api/itens
+        name: Cadastrar itens
+        meta:
+          id: req_eeda183816c843a3a86d8fd9711bd6ac
+          created: 1755027308999
+          modified: 1755027885734
+          isPrivate: false
+          description: ""
+          sortKey: -1755027308999
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "Maça",
+            	"preco": 2.99
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: ApiJsExpress
+    meta:
+      id: fld_681c6cdda74c40af835a978d12dcb1e5
+      created: 1755355049275
+      modified: 1755355049275
+      sortKey: -1755355049275
+      description: ""
+    children:
+      - name: Venda
+        meta:
+          id: fld_078b32e0f3d64342b80106563dce6ad6
+          created: 1755355069909
+          modified: 1755481844265
+          sortKey: -1755355069909
+          description: ""
+        children:
+          - url: http://localhost:5005/api/vendas/adicionar/68a64d259fd9cb051764411e
+            name: Adicionar venda
+            meta:
+              id: req_f54d5b55c2c14b19a459e13d4852d73c
+              created: 1755355052697
+              modified: 1755729295351
+              isPrivate: false
+              description: ""
+              sortKey: -1755355086934
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"categoria": "Moto",
+                	"valorVenda": 350
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5005/api/vendas/listar
+            name: Buscar vendas
+            meta:
+              id: req_edc911007fec4900ad190e6af187c890
+              created: 1755457235132
+              modified: 1755528773666
+              isPrivate: false
+              description: ""
+              sortKey: -1755457235132
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5005/api/vendas/buscar/046709e3-5df0-4a18-948a-43a7a4a36dc0
+            name: Buscar venda
+            meta:
+              id: req_37d5f760eadf430f8a9e850834df76cc
+              created: 1755531752805
+              modified: 1755532991279
+              isPrivate: false
+              description: ""
+              sortKey: -1755531752805
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5005/api/vendas/vendedor/68a28ac537f7b10036042152
+            name: Buscar vendas vendedor
+            meta:
+              id: req_c4dec9046f63454d82aa65112f0da362
+              created: 1755534973730
+              modified: 1755535894286
+              isPrivate: false
+              description: ""
+              sortKey: -1755534973730
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5005/api/vendas/calc-total
+            name: Calcular total de vendas
+            meta:
+              id: req_b85a671529a34b15b4a64111e8d0b634
+              created: 1755536485678
+              modified: 1755536512206
+              isPrivate: false
+              description: ""
+              sortKey: -1755536485678
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5005/api/vendas/filtrar-valor
+            name: Filtrar vendas por valor
+            meta:
+              id: req_94ddbfd8613d426fa69a9f4bfb40388d
+              created: 1755537462160
+              modified: 1755543051222
+              isPrivate: false
+              description: ""
+              sortKey: -1755537462160
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"filtroOp": "menorIgual",
+                	"valorFiltro": 800
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5005/api/vendas/editar/046709e3-5df0-4a18-948a-43a7a4a36dc0
+            name: Editar venda
+            meta:
+              id: req_ee67b91f1b2d4ef8b722e0b195673e8e
+              created: 1755556198397
+              modified: 1755730711776
+              isPrivate: false
+              description: ""
+              sortKey: -1755556198397
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"categoria": "Imobiliario",
+                	"valorVenda": "500050"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5005/api/vendas/remover/0ecc0b61-3af5-4574-92ca-c100367e446d
+            name: Remover venda
+            meta:
+              id: req_8b47be9ec3c94cfdb247fa44cd4b2bf8
+              created: 1755566578353
+              modified: 1755567136437
+              isPrivate: false
+              description: ""
+              sortKey: -1755566578353
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Vendedor
+        meta:
+          id: fld_3929823b561444f893359fb5f7b73b62
+          created: 1755355077526
+          modified: 1755481850555
+          sortKey: -1755355077526
+          description: ""
+        children:
+          - url: http://localhost:5005/api/vendedor/cadastrar
+            name: Criar vendedor
+            meta:
+              id: req_7530796de96244108b23dd68cebc0f2d
+              created: 1755482052384
+              modified: 1755730030108
+              isPrivate: false
+              description: ""
+              sortKey: -1755482052385
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"nomeVendedor": "Teste Vendedor 7",
+                	"email": "vendedor4@email.com"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5005/api/vendedor/listar
+            name: Listar vendedores
+            meta:
+              id: req_09fb3c0c2eb74dff813b043c98bdc860
+              created: 1755568707858
+              modified: 1755568736859
+              isPrivate: false
+              description: ""
+              sortKey: -1755568707858
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5005/api/vendedor/editar/68a28ac537f7b10036042152
+            name: Editar cadastro
+            meta:
+              id: req_509459bb98bd4caab2b7d807252852ee
+              created: 1755643622097
+              modified: 1755730482218
+              isPrivate: false
+              description: ""
+              sortKey: -1755643622097
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"nomeVendedor": "Hefrayn",
+                	"email": "hefrayn@email.com"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5005/api/vendedor/meta-mensal/68a6429044f45554a8ddec2d
+            name: Verificar meta mensal vendedor
+            meta:
+              id: req_bc43d36319ca4cef8fd093a18291473f
+              created: 1755726645569
+              modified: 1755731359012
+              isPrivate: false
+              description: ""
+              sortKey: -1755726645569
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5005/api/vendedor/meta-mensal-todos
+            name: "Verificar meta mensal de todos "
+            meta:
+              id: req_05a8180c84f141afa97e37935131ad7e
+              created: 1755727779300
+              modified: 1755727816982
+              isPrivate: false
+              description: ""
+              sortKey: -1755727779300
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Metas
+        meta:
+          id: fld_e9b4ce7fdad6454e8b8192b45df014fb
+          created: 1755718868798
+          modified: 1755718868798
+          sortKey: -1755718868798
+          description: ""
+        children:
+          - url: http://localhost:5005/api/metas/cadastrar
+            name: Adicionar meta
+            meta:
+              id: req_1d62fd5f50e349288a637eff0f72107f
+              created: 1755718873523
+              modified: 1755726118979
+              isPrivate: false
+              description: ""
+              sortKey: -1755718873523
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"tipoMeta": "ouro",
+                	"periodo": "trimestral",
+                	"valorMeta": 200000
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5005/api/metas/editar/68a641099e1c7677db868421
+            name: Editar meta
+            meta:
+              id: req_10000b9c7a544adfba32461d8b7cb09c
+              created: 1755719028694
+              modified: 1755729429526
+              isPrivate: false
+              description: ""
+              sortKey: -1755719028694
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"tipoMeta": "bronze",
+                	"periodo": "mensal",
+                	"valorMeta": 150000
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5005/api/metas/buscar
+            name: Buscar metas
+            meta:
+              id: req_120ed6e114284a6080daa48eb0b6209a
+              created: 1755719074221
+              modified: 1755726458920
+              isPrivate: false
+              description: ""
+              sortKey: -1755719074221
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_21f9aba18ef563ad2d1a85f440eeba17d984dc02
+    created: 1752752774280
+    modified: 1752752774280
+environments:
+  name: Base Environment
+  meta:
+    id: env_21f9aba18ef563ad2d1a85f440eeba17d984dc02
+    created: 1716000456221
+    modified: 1752752774229
+    isPrivate: false
