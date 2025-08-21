@@ -7,6 +7,7 @@ const Vendedor = new Schema({
         message: "Nome do vendedor é obrigatorio", },
     email: {
         type: String,
+        unique: true,
         required: [true, "E-mail do vendedor é obrigatório."],
         validate: {
             validator: function (value) {
@@ -15,11 +16,23 @@ const Vendedor = new Schema({
             message: props => `${props.value} não é um e-mail válido`,
         },
     },
-    atingiuMeta: {
+    // atingiuMeta: {
+    //     type: Boolean,
+    //     default: false,
+    // },
+    ativo: {
         type: Boolean,
-        required: true,
-        default: false,
-    },
+        default: true,
+    }
+    // },
+    // categoriaFrente: {
+    //     type: String,
+    //     required: true,
+    //     enum: {
+    //         values: ["Carro", "Moto", "Imobiliario", "Caminhao", "Aviao", "Seguro"],
+    //         message: "Falha ao validar enum `{PATH}` valor `{VALUE}` não existe.",
+    //     }
+    // },
 });
 
 export default model("Vendedor", Vendedor);

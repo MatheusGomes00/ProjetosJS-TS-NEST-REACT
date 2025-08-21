@@ -1,4 +1,4 @@
-import mongoose, { Schema, model } from "mongoose";
+import { Schema, model } from "mongoose";
 import { v4 as uuidv4 } from "uuid";
 
 const Venda = new Schema({
@@ -38,4 +38,4 @@ const Venda = new Schema({
 });
 
 // exporta o schema como modelo/entidade para manipulação e persistencia
-export default mongoose.model('Venda', Venda);
+export default model('Venda', Venda);

@@ -97,7 +97,9 @@ export async function filtrarVendas(req, res) {
 export async function editarVenda(req, res) {
     try {
         const codigo = req.params.codigoVenda;
-
+        if(!req.body.valorVenda && !req.body.categoria) {
+            return res.status(400).json("Necessário passar valorVenda e ou categoria");
+        }
         const alteracoes = {}
         if(req.body.categoria) {
             alteracoes.categoria = req.body.categoria;
@@ -106,7 +108,7 @@ export async function editarVenda(req, res) {
             alteracoes.valorVenda = req.body.valorVenda;
         }
         const vendaAtualizada = await Venda.findOneAndUpdate({codigoVenda: codigo},
-            alteracoes, { new: true }); // se não definir a option {new:true} vai retornar o objeto antes de atualizar
+            alteracoes, { new: true, runValidators: true });
         if (!vendaAtualizada) {
             return res.status(400).json({erro: "Erro ao atualizar venda. " +
                     "Verifique o código da venda e as alterações passadas."});
@@ -117,7 +119,7 @@ export async function editarVenda(req, res) {
     }
 }
 
-// realiza a remoção do registro, pode ser alterado para exclusão lógica
+// realiza a remoção banco de dados, pode ser alterado para exclusão lógica
 export async function removerVenda(req, res) {
     try {
         const codigo = req.params.codigoVenda;
