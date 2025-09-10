@@ -13,7 +13,7 @@ function App() {
       const response = await api.get("/itens")
       setItens(response.data)
     } catch (erro) {
-      console.erro("erro ao buscar itens: ", erro.message)
+      console.log("erro ao buscar itens: ", erro.message)
     }
   }
 
@@ -27,7 +27,7 @@ function App() {
       console.log(response)
       setItens([...itens, response.data]);
     } catch (erro) {
-      console.erro("Erro ao adicionar item", erro.message);
+      console.log("Erro ao adicionar item", erro.message);
     }
   };
 
@@ -38,7 +38,7 @@ function App() {
       console.log(response);
       setItens(itens.filter(item => item._id !== id));
     } catch (erro) {   
-        console.error("Erro ao deletar item: ", erro.message)
+        console.log("Erro ao deletar item: ", erro.message)
     }
   }
 
