@@ -9,12 +9,8 @@ dotenv.config();
 const app = express();
 connectDB();
 
-/*app.use(cors({
-    origin: ["http://localhost:5001", "http://localhost:3001"],
-    methods: ["GET", "POST", "DELETE"],
-    allowedHeaders: ["Content-Type"]
-}));*/
-//app.use(); // habilita todas urls...
+app.use(cors());
+
 app.use(express.json());
 
 app.use("/api/itens", itemRotas)
