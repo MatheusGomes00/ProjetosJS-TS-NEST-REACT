@@ -27,7 +27,7 @@ com ERP).
 Os projetos serão organizados em uma sequência iniciando do backend, passando pelo frontend e depois para a 
 integração, cada um abordando novas camadas da stack. Abaixo estão listados os projetos com um link útil para 
 navegação:
-1. [Fundamentos JavaScript](./jsPuro/README.md) - Neste projeto exploro somente o NodeJS para construir o sistema de 
+1. [Fundamentos JavaScript](./jsPuro) - Neste projeto exploro somente o NodeJS para construir o sistema de 
 gerenciamento de vendas, armazenando os dados em memória. A imagem abaixo mostra como ficou o menu ainda em linha de comando.<br><img src="./content/images/menu1.png">
 2. [API usando ExpressJS](./ApiJsExpress)  - Aqui uso o framework ExpressJS para construir uma API REST
 para o sistema, utilizo MongoDB para armazenar os dados. A imagem abaixo mostra um teste via Insomnia para um 
