@@ -30,6 +30,7 @@ navegação:
 1. [Fundamentos JavaScript](./jsPuro/README.md) - Neste projeto exploro somente o NodeJS para construir o sistema de 
 gerenciamento de vendas, armazenando os dados em memória. A imagem abaixo mostra como ficou o menu ainda em linha de comando.<br>
 <img src="./content/images/menu1.png">
+<br>
 2. [API usando ExpressJS](./ApiJsExpress)  - Aqui uso o framework ExpressJS para construir uma API REST
 para o sistema, utilizo MongoDB para armazenar os dados. A imagem abaixo mostra um teste via Insomnia para um 
 endpoint de cadastro de venda:
