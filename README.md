@@ -1,48 +1,37 @@
-# Repositório criado para estudo e aplicação de prática
+# Repositório FullStack com JavaScript e React
 
 ## Descrição
-O repositorio busca explorar o ecosistema fullstack do javascript:
-- Lógica e conceitos básicos como declarar variáveis let ou const, tipos e manipulação de dados, estruturas condicionais, laços de repetição, funções, arrow function, assincronia.
-- Uso de bibliotecas e frameworks backend como Express e Nest.
-- API REST, camada de segurança, tratamento de erros e testes.
-- Uso de bibliotecas e frameworks frontend como React e Next.
-- Componentização e camadas uteis.
-- Migração para TypeScript.
+Este repositório reúne uma trilha de projetos práticos voltados para o desenvolvimento FullStack utilizando 
+JavaScript e React. A proposta é evoluir gradualmente do básico ao intermediário, abordando:
+- Construção de APIs e serviços backend com NodeJS.
+- Integração com bancos de dados relacionais e não relacionais.
+- Criação de interfaces modernas e responsivas com React.
+- Princípios de autenticação, segurança, mensageria, testes, escalabilidade e boas práticas de arquitetura.
 
-## 
-- **NodeJS 22**
-- **Framework Express**
-- **Banco de dados NoSQL MongoDB**
-- **Lib Mongoose**
-- **Insomnia**
+## Problema proposto
+O desafio central é construir um sistema de gerenciamento interno de vendas, que permita acompanhar o desempenho 
+de vendedores, metas e resultados. Entre os parâmetros e requisitos:
+- Gestão de vendedores: cadastro, edição, exclusão lógica e listagem.
+- Controle de vendas: inclusão, edição, exclusão e consultas por filtros.
+- Metas personalizadas: definição por período (mensal, trimestral, etc.) e por categoria (bronze, prata e ouro).
+- Relatórios:
+    - Ranking de vendedores por período.
+    - Total de vendas por categoria.
+    - Evolução de metas e resultados.
+- Usabilidade: interface web amigável para acompanhamento em tempo real.
+- Escalabilidade: arquitetura que permita integrar novos módulos no futuro (ex.: comissões, notificações, integração 
+com ERP).
+- Boas práticas: uso de padrões REST, documentação da API, organização de código modular.
 
-## Como Usar
-1. Após baixado projeto, abra uma IDE de sua preferência na raiz do projeto.
-2. Abra o terminal e instale as dependências do package.json com `npm install`.
-3. Depois inicie o servidor com `node server.js`. É esperado que apareça as seguintes mensagens no console:
-```
-    MongoDB conectado.
-    Servidor rodando na porta 5005.
-```
-4. Teste os endpoints em uma ferramenta para consumir APIs como `Insomnia` ou `Postman`. Caso você já tenha o `Insomnia` instalado, na raiz deste repositório tem uma pasta **CollectionsInsomnia** com arquivo .yaml que pode ser importado para testes.
-
-
-## Conceitos Explorados
-- **Estrutura modularizada**: Separação de responsabilidades entre as camadas do servidor, facilitando os testes, manutenção e refatoração futura.
-- **Padronização JSON**: Respostas da api seguem um padrão json, garantindo consistência e facilitando a integração com o frontend.
-- **Validação de entradas**: Garantia de que os dados que são recebidos em uma requisição estão de acordo com os requisitos dos modelos estruturados.
-- **Métodos HTTP**: Operações essenciais para manipular dados na web como `GET, POST, PUT, DELETE`.
-- **Métodos da lib mongoose**: Métodos utilizados para persistência e consulta de dados como `.findOneAndUpdate()`, `.create()`, `.save()`, `.aggregate()`, `.findOneAndDelete()`.
-- **Explusão lógica/física**: Ao receber uma requisição para remover um recurso, optar remover o registro do banco de dados ou apenas alterar o status de um campo.
-- **Assincronia**: Uso de `async/await` com Promises para criação de funções e manipulação do banco de dados.
-- **Princípios REST**: Organização da API seguindo boas práticas de recursos, rotas semânticas e uso adequado dos códigos de status HTTP.
-- **Códigos de Status HTTP**: Retorno de mensagens padronizadas com status como 200, 400, 404, 500 para indicar o resultado das requisições.
-- **Testes com clientes de API**: Uso do Insomnia para validar endpoints.
-
-
-## Próximos Passos
-- **Testes automatizados:** Implementar testes unitários e de integração para garantir a qualidade e a estabilidade da API.
-- **Migração para banco SQL:** Por facilidade de conexão, baixa complexidade de estruturação de modelos e testes rápidos, utilizei o MongoDB. Entretanto para geração de relatórios o SQL se mostrou mais recomendado pela rede. Além disso os modelos que já foram criados possui relacionamentos e os campos são fixos não apresentando muita margem para variação ou novos campos.
-- **Autenticação e Autorização:** Adicionar uma camada de segurança para controle de acesso. A proposta é criar uma API stateless utilizando `JWT` para autenticação e `bcrypt` para hashing de senhas.
-- **Manipulação global de erros:** Utilizar os recursos do `Express` para centralizar e padronizar o tratamento de erros, fornecendo respostas mais claras para o cliente.
-- **Integração com frontend:** Habilitar `CORS` e realizar testes de consumo da API diretamente a partir do frontend,
+## Roadmap
+Os projetos serão organizados em uma sequência iniciando do backend, passando pelo frontend e depois para a 
+integração, cada um abordando novas camadas da stack. Abaixo estão listados os projetos com um link útil para 
+navegação:
+1. [Fundamentos JavaScrip](./jsPuro/README.md) - Neste projeto exploro somente o nodejs para construir o sistema de 
+gerenciamento de vendas, armazenando os dados em memória. A imagem abaixo mostra como ficou o menu ainda em linha de comando.<br>
+<img src="./content/images/menu1.png">
+2. [API usando ExpressJS](./ApiJsExpress/README.md) - Aqui uso o framework ExpressJS para construir uma API REST
+para o sistema, utilizo MongoDB para armazenar os dados. A imagem abaixo mostro um teste via Insomnia para um 
+endpoint de cadastro de venda:
+<img src="./content/images/adicionarVenda1.png">
+3. Em desenvolvimento...
