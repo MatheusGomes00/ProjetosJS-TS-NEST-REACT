@@ -23,7 +23,7 @@ O sistema permite:
 
 
 ## Como Usar
-1. Rode `node index.js`.
+1. Rode `node testes.js`.
 2. Escolha uma opção de 1 a 6 no menu interativo:
     - **1**: Adicionar uma venda (nome do vendedor, valor, data no formato DD-MM-AAAA).
     - **2**: Listar todas as vendas.
