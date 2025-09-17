@@ -1,20 +1,27 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { Sidebar, SidebarBody, SidebarSection, SidebarItem, SidebarLabel } from "./components/sidebar";
-import homeIcon  from "./assets/home1.svg";
+import { Sidebar, SidebarBody, SidebarSection, SidebarItem, SidebarLabel, SidebarHeading } from "./components/sidebar";
 import clientes from "./assets/clientes1.svg";
 import metas from "./assets/metas1.svg";
 import vendas from "./assets/vendas1.svg";
 import cadastro from "./assets/cadastro3.svg";
+import home from "./assets/home1.svg";
+import heading from "./assets/heading1.svg"
+
 
 const Layout = () => {
     return (
         <div className="flex h-screen">
             <Sidebar className="w-64 bg-gray-800 text-white flex flex-col">
+
                 <SidebarBody>
+                    <SidebarHeading className="flex items-center py-2 gap-2">
+                        <img src={heading} className="w-30 h-30" alt="icone heading"/>
+                        portal de vendas
+                    </SidebarHeading>
                     <SidebarSection>
                         <SidebarItem to="/home">
-                            <img src={homeIcon} className="w-20 h-20"  alt={"icone da home"} />
+                            <img src={home} className="w-20 h-20"  alt={"icone da home"} />
                             <SidebarLabel>Início</SidebarLabel>
                         </SidebarItem>
                     </SidebarSection>

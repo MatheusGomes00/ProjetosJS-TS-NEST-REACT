@@ -1,12 +1,47 @@
-# React + Vite
+# Frontend - Portal de Vendas (frontv1)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descrição
 
-Currently, two official plugins are available:
+Este projeto representa a **primeira versão do frontend** do portal de vendas.
+O objetivo inicial é **modelar toda a interface e navegação**, sem conexão com o backend neste momento.
+Assim, conseguimos validar o fluxo entre as páginas e preparar a base para futuras integrações com a API do backend.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Estrutura Inicial
 
-## Expanding the ESLint configuration
+As páginas previstas são:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Dashboard**: visão geral do sistema, métricas e indicadores.
+* **Vendas**: listagem e gerenciamento de vendas.
+* **Clientes**: cadastro, edição e visualização de clientes.
+* **Metas**: acompanhamento de metas por período e categoria.
+
+## Tecnologias Utilizadas
+
+* **React** (com Vite)
+* **React Router** (para navegação entre páginas)
+* **TailwindCSS** (para estilização inicial)
+
+## Próximos Passos
+
+* Finalizar protótipo da interface (sem backend).
+* Revisar usabilidade e layout.
+* Integrar com a **API backend** de vendas.
+* Ajustar ou expandir funcionalidades no backend, conforme necessidade do frontend.
+
+## Como Executar
+
+1. Clone o repositório.
+2. Acesse a pasta do projeto `frontv1`.
+3. Instale as dependências:
+
+   ```bash
+   npm install
+   ```
+4. Rode o servidor de desenvolvimento:
+
+   ```bash
+   npm run dev
+   ```
+5. Acesse no navegador o endereço indicado no terminal (geralmente `http://localhost:5173`).
+
+---
