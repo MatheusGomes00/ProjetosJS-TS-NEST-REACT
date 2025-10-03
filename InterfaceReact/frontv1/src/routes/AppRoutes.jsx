@@ -1,12 +1,10 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Home from '../pages/Home/home';
-import Layout from '../Layout.jsx'
-import Clientes from '../pages/Clientes/clientes.jsx';
-import Cadastro from '../pages/Cadastro/cadastro.jsx';
-import Metas from '../pages/Metas/metas.jsx';
-import Vendas from '../pages/Vendas/vendas.jsx';
-
-
+import Layout from '../Layout'
+import Clientes from '../pages/Clientes/clientes';
+import Cadastro from '../pages/Cadastro/cadastro';
+import Metas from '../pages/Metas/metas';
+import Vendas from '../pages/Vendas/vendas';
 
 export default function AppRoutes() {
     return (
