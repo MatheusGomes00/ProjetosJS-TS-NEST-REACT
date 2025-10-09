@@ -1,16 +1,18 @@
-import {CardInfo, CardMeta} from "../../components/cards.jsx";
-import {BlueButton, GreenButton} from "../../components/buttons.jsx";
-import vendas from "../../assets/vendas1.svg";
-import clientes from "../../assets/clientes1.svg";
-import React from "react";
+import {CardInfo, CardMeta} from "../../components/ui/cards.jsx";
+import {BlueButton, GreenButton} from "../../components/ui/buttons.jsx";
+import vendasImg from "../../assets/vendas1.svg";
+import clientesImg from "../../assets/clientes1.svg";
+import React, {useState} from "react";
+import {createPortal} from "react-dom";
+import {ClienteModal} from "../../components/clientes/ClienteModal.jsx";
+import {handleNovoCliente} from "../../services/ClienteService.js";
 
 
 const Home = () => {
+    const [showModalCliente, setShowModalCliente] = useState(false);
+
     const handleNovaVenda = () => {
         console.log("Nova venda adicionada!");
-    }
-    const handleNovoCliente = () => {
-        console.log("Novo cliente adicionado!");
     }
 
     return (
@@ -21,13 +23,19 @@ const Home = () => {
 
             <div className={"flex flex-col items-center justify-center gap-4"}>
                 <GreenButton onClick={handleNovaVenda}>
-                    <img src={vendas} className="w-16 h-16"  alt={"icone da vendas"} />
+                    <img src={vendasImg} className="w-16 h-16"  alt={"icone da vendas"} />
                     Nova Venda
                 </GreenButton>
-                <BlueButton onClick={handleNovoCliente}>
-                    <img src={clientes} className="w-16 h-16"  alt={"icone cliente"} />
+                <BlueButton onClick={() => setShowModalCliente(true)}>
+                    <img src={clientesImg} className="w-16 h-16"  alt={"icone cliente"} />
                     Novo Cliente
                 </BlueButton>
+                {showModalCliente && createPortal(
+                    <ClienteModal text={"Cadastrar Cliente"} modalAction={handleNovoCliente}
+                                  onClose={() => setShowModalCliente(false)}
+                    />,
+                    document.getElementById('modal-root')
+                )}
             </div>
         </div>
     );
