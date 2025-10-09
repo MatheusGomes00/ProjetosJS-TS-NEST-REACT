@@ -17,7 +17,7 @@ export const Sidebar = ({ isOpen, children, className }) => {
 /* Corpo da sidebar */
 export const SidebarBody = ({ children, className }) => {
     return (
-        <nav className={`flex-1 flex flex-col overflow-y-auto ${className}`}>
+        <nav className={`flex-1 flex flex-col ${className}`}>
             {children}
         </nav>
     );

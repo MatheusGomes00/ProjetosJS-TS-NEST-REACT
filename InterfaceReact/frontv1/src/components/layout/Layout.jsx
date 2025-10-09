@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
-import { Sidebar, SidebarBody, SidebarSection, SidebarItem, SidebarLabel, SidebarHeading } from "./components/sidebar";
-import clientes from "./assets/clientes1.svg";
-import metas from "./assets/metas1.svg";
-import vendas from "./assets/vendas1.svg";
-import cadastro from "./assets/cadastro3.svg";
-import home from "./assets/home1.svg";
-import heading from "./assets/heading1.svg"
+import { Sidebar, SidebarBody, SidebarSection, SidebarItem, SidebarLabel, SidebarHeading } from "./sidebar.jsx";
+import clientes from "../../assets/clientes1.svg";
+import metas from "../../assets/metas1.svg";
+import vendas from "../../assets/vendas1.svg";
+import cadastro from "../../assets/cadastro3.svg";
+import home from "../../assets/home1.svg";
+import heading from "../../assets/heading1.svg"
 
 
 const Layout = () => {
@@ -21,38 +21,38 @@ const Layout = () => {
                 <SidebarBody>
                     <div onClick={closeSidebar}>
                         <SidebarHeading className="flex items-center py-2 gap-2">
-                            <img src={heading} className="w-30 h-30" alt="icone heading"/>
+                            <img src={heading} className="w-20 h-20" alt="icone heading"/>
                             portal de vendas
                         </SidebarHeading>
                         <SidebarSection>
 
                             <SidebarItem to="/home">
-                                <img src={home} className="w-20 h-20"  alt={"icone da home"} />
+                                <img src={home} className="w-16 h-16"  alt={"icone da home"} />
                                 <SidebarLabel>Início</SidebarLabel>
                             </SidebarItem>
                         </SidebarSection>
                         <SidebarSection>
                             <SidebarItem to="/clientes">
-                                <img src={clientes} className="w-20 h-20"  alt={"icone da clientes"} />
+                                <img src={clientes} className="w-16 h-16"  alt={"icone da clientes"} />
                                 <SidebarLabel>Clientes</SidebarLabel>
                             </SidebarItem>
                         </SidebarSection>
                         <SidebarSection>
                             <SidebarItem to="/vendas">
-                                <img src={vendas} className="w-20 h-20"  alt={"icone da vendas"} />
+                                <img src={vendas} className="w-16 h-16"  alt={"icone da vendas"} />
                                 <SidebarLabel>Vendas</SidebarLabel>
                             </SidebarItem>
                         </SidebarSection>
                         <SidebarSection>
                             <SidebarItem to="/metas">
-                                <img src={metas} className="w-20 h-20"  alt={"icone da metas"} />
+                                <img src={metas} className="w-16 h-16"  alt={"icone da metas"} />
                                 <SidebarLabel>Metas</SidebarLabel>
                             </SidebarItem>
                         </SidebarSection>
                         <SidebarSection>
-                            <SidebarItem to="/cadastro">
-                                <img src={cadastro} className="w-20 h-20"  alt={"icone de cadastro"} />
-                                <SidebarLabel>Cadastro</SidebarLabel>
+                            <SidebarItem to="/perfil">
+                                <img src={cadastro} className="w-16 h-16"  alt={"icone de cadastro"} />
+                                <SidebarLabel>Perfil</SidebarLabel>
                             </SidebarItem>
                         </SidebarSection>
                     </div>
