@@ -1,303 +1,378 @@
 export const ListaVendas = () => {
     return [{
-        "cpfCliente": "726-27-1133",
-        "categoria": "caminhao",
-        "valorVenda": 8395,
-        "dataVenda": "2025-09-27T07:17:16Z",
-        "codigoVenda": "ff2b03a9-2734-4d1e-bafc-782a60ae77c3",
         "vendedorId": {
-            "$oid": "68e7c505fc13ae3b365fe6aa"
+            "$oid": "68e96e11fc13ae66a95fe592"
         },
-        "_id": {
-            "$oid": "68e7c505fc13ae3b365fe6ab"
-        }
-    }, {
-        "cpfCliente": "791-90-1933",
-        "categoria": "seguro",
-        "valorVenda": 6487,
-        "dataVenda": "2025-09-28T23:49:43Z",
-        "codigoVenda": "d14d6f56-bd1f-4fe2-8081-d15667d6e738",
-        "vendedorId": {
-            "$oid": "68e7c505fc13ae3b365fe6ac"
+        "clienteId": {
+            "_id": {
+                "$oid": "68e96e11fc13ae66a95fe593"
+            },
+            "nome": "Keefer Beavors",
+            "cpf": "100-06-1326"
         },
-        "_id": {
-            "$oid": "68e7c505fc13ae3b365fe6ad"
-        }
-    }, {
-        "cpfCliente": "813-63-5625",
-        "categoria": "carro",
-        "valorVenda": 4075,
-        "dataVenda": "2025-09-28T01:57:12Z",
-        "codigoVenda": "46587612-12b9-4bae-bd93-954837bbc0f1",
-        "vendedorId": {
-            "$oid": "68e7c505fc13ae3b365fe6ae"
-        },
-        "_id": {
-            "$oid": "68e7c505fc13ae3b365fe6af"
-        }
-    }, {
-        "cpfCliente": "579-84-7891",
         "categoria": "moto",
-        "valorVenda": 8552,
-        "dataVenda": "2025-09-18T15:37:46Z",
-        "codigoVenda": "026bfa17-4697-4861-9406-2b37e72b59e9",
-        "vendedorId": {
-            "$oid": "68e7c505fc13ae3b365fe6b0"
-        },
-        "_id": {
-            "$oid": "68e7c505fc13ae3b365fe6b1"
-        }
+        "valorVenda": 79.0,
+        "dataVenda": "2025-10-05T16:06:12Z",
+        "codigoVenda": "fe522565-5757-47ff-a444-fc7b2c0f8db2"
     }, {
-        "cpfCliente": "654-51-8490",
-        "categoria": "aviao",
-        "valorVenda": 9093,
-        "dataVenda": "2025-09-06T03:16:46Z",
-        "codigoVenda": "1c13d71c-1408-478d-bdc4-fe1feca9facd",
         "vendedorId": {
-            "$oid": "68e7c505fc13ae3b365fe6b2"
+            "$oid": "68e96e11fc13ae66a95fe594"
         },
-        "_id": {
-            "$oid": "68e7c505fc13ae3b365fe6b3"
-        }
-    }, {
-        "cpfCliente": "138-82-9657",
-        "categoria": "seguro",
-        "valorVenda": 4786,
-        "dataVenda": "2025-09-15T13:05:29Z",
-        "codigoVenda": "d9f76561-da67-4114-9407-075408cc8f6a",
-        "vendedorId": {
-            "$oid": "68e7c505fc13ae3b365fe6b4"
+        "clienteId": {
+            "_id": {
+                "$oid": "68e96e11fc13ae66a95fe595"
+            },
+            "nome": "Sarette Vynoll",
+            "cpf": "229-49-6294"
         },
-        "_id": {
-            "$oid": "68e7c505fc13ae3b365fe6b5"
-        }
-    }, {
-        "cpfCliente": "431-65-6945",
-        "categoria": "moto",
-        "valorVenda": 8626,
-        "dataVenda": "2025-09-06T20:19:13Z",
-        "codigoVenda": "063913d8-8e50-41eb-8d33-0f8c08028d3d",
-        "vendedorId": {
-            "$oid": "68e7c505fc13ae3b365fe6b6"
-        },
-        "_id": {
-            "$oid": "68e7c505fc13ae3b365fe6b7"
-        }
-    }, {
-        "cpfCliente": "258-70-0278",
-        "categoria": "aviao",
-        "valorVenda": 1419,
-        "dataVenda": "2025-09-03T14:00:14Z",
-        "codigoVenda": "1dd655e3-883b-42bb-9a36-e0b110907aec",
-        "vendedorId": {
-            "$oid": "68e7c505fc13ae3b365fe6b8"
-        },
-        "_id": {
-            "$oid": "68e7c505fc13ae3b365fe6b9"
-        }
-    }, {
-        "cpfCliente": "228-01-8500",
         "categoria": "carro",
-        "valorVenda": 713,
-        "dataVenda": "2025-09-02T21:57:53Z",
-        "codigoVenda": "72568e4d-eb12-40d1-a839-8c03dd452654",
-        "vendedorId": {
-            "$oid": "68e7c505fc13ae3b365fe6ba"
-        },
-        "_id": {
-            "$oid": "68e7c505fc13ae3b365fe6bb"
-        }
+        "valorVenda": 461.68,
+        "dataVenda": "2025-09-30T13:31:06Z",
+        "codigoVenda": "5aed570b-8809-40d0-98c8-e658f1b7fae7"
     }, {
-        "cpfCliente": "842-18-2722",
-        "categoria": "caminhao",
-        "valorVenda": 5251,
-        "dataVenda": "2025-09-10T08:40:58Z",
-        "codigoVenda": "8d380f3d-33fc-469d-b1a8-837335f226e6",
         "vendedorId": {
-            "$oid": "68e7c505fc13ae3b365fe6bc"
+            "$oid": "68e96e11fc13ae66a95fe596"
         },
-        "_id": {
-            "$oid": "68e7c505fc13ae3b365fe6bd"
-        }
+        "clienteId": {
+            "_id": {
+                "$oid": "68e96e11fc13ae66a95fe597"
+            },
+            "nome": "Freda Coote",
+            "cpf": "767-33-9886"
+        },
+        "categoria": "carro",
+        "valorVenda": 416.04,
+        "dataVenda": "2025-09-04T16:05:46Z",
+        "codigoVenda": "1c315d4a-d94b-4c87-b512-f8badeba7c50"
     }, {
-        "cpfCliente": "200-04-6805",
-        "categoria": "caminhao",
-        "valorVenda": 5078,
-        "dataVenda": "2025-09-13T23:42:26Z",
-        "codigoVenda": "7fb44433-134d-4c76-8c8e-9a9aae55fdc3",
         "vendedorId": {
-            "$oid": "68e7c505fc13ae3b365fe6be"
+            "$oid": "68e96e11fc13ae66a95fe598"
         },
-        "_id": {
-            "$oid": "68e7c505fc13ae3b365fe6bf"
-        }
-    }, {
-        "cpfCliente": "397-31-5020",
+        "clienteId": {
+            "_id": {
+                "$oid": "68e96e11fc13ae66a95fe599"
+            },
+            "nome": "Alick Medgwick",
+            "cpf": "355-31-3995"
+        },
         "categoria": "imobiliario",
-        "valorVenda": 1735,
-        "dataVenda": "2025-10-05T20:17:32Z",
-        "codigoVenda": "0fc8f6a3-e7f7-4bf5-9115-a4d078dcf5ff",
-        "vendedorId": {
-            "$oid": "68e7c505fc13ae3b365fe6c0"
-        },
-        "_id": {
-            "$oid": "68e7c505fc13ae3b365fe6c1"
-        }
+        "valorVenda": 264.9,
+        "dataVenda": "2025-09-16T23:37:39Z",
+        "codigoVenda": "679f8f92-eddb-411e-9796-1420adc6dbf4"
     }, {
-        "cpfCliente": "430-37-6748",
-        "categoria": "seguro",
-        "valorVenda": 5447,
-        "dataVenda": "2025-09-27T21:39:45Z",
-        "codigoVenda": "b67e0604-eea8-4b74-810e-6fb5017f8bb9",
         "vendedorId": {
-            "$oid": "68e7c505fc13ae3b365fe6c2"
+            "$oid": "68e96e11fc13ae66a95fe59a"
         },
-        "_id": {
-            "$oid": "68e7c505fc13ae3b365fe6c3"
-        }
-    }, {
-        "cpfCliente": "371-26-7100",
-        "categoria": "seguro",
-        "valorVenda": 6094,
-        "dataVenda": "2025-09-22T19:49:41Z",
-        "codigoVenda": "9973dfd0-bded-4a50-871b-7f1d02a1a344",
-        "vendedorId": {
-            "$oid": "68e7c505fc13ae3b365fe6c4"
+        "clienteId": {
+            "_id": {
+                "$oid": "68e96e11fc13ae66a95fe59b"
+            },
+            "nome": "Ebba Pargiter",
+            "cpf": "703-30-0920"
         },
-        "_id": {
-            "$oid": "68e7c505fc13ae3b365fe6c5"
-        }
-    }, {
-        "cpfCliente": "287-59-9413",
-        "categoria": "seguro",
-        "valorVenda": 3642,
-        "dataVenda": "2025-10-08T11:23:23Z",
-        "codigoVenda": "927f5064-fcff-49ce-88f2-8705e1776e83",
-        "vendedorId": {
-            "$oid": "68e7c505fc13ae3b365fe6c6"
-        },
-        "_id": {
-            "$oid": "68e7c505fc13ae3b365fe6c7"
-        }
-    }, {
-        "cpfCliente": "410-84-9494",
-        "categoria": "aviao",
-        "valorVenda": 2403,
-        "dataVenda": "2025-09-28T21:36:59Z",
-        "codigoVenda": "b1519fe9-857f-4b93-9e87-b1dfe7401920",
-        "vendedorId": {
-            "$oid": "68e7c505fc13ae3b365fe6c8"
-        },
-        "_id": {
-            "$oid": "68e7c505fc13ae3b365fe6c9"
-        }
-    }, {
-        "cpfCliente": "627-58-6605",
         "categoria": "carro",
-        "valorVenda": 954,
-        "dataVenda": "2025-09-08T06:28:00Z",
-        "codigoVenda": "8f8e4595-ed91-4518-adfa-d96f762f9f3d",
-        "vendedorId": {
-            "$oid": "68e7c505fc13ae3b365fe6ca"
-        },
-        "_id": {
-            "$oid": "68e7c505fc13ae3b365fe6cb"
-        }
+        "valorVenda": 221.1,
+        "dataVenda": "2025-10-05T03:45:37Z",
+        "codigoVenda": "976eb519-c02e-4937-8574-5f0d3ae866a8"
     }, {
-        "cpfCliente": "524-29-8532",
+        "vendedorId": {
+            "$oid": "68e96e11fc13ae66a95fe59c"
+        },
+        "clienteId": {
+            "_id": {
+                "$oid": "68e96e11fc13ae66a95fe59d"
+            },
+            "nome": "Elwyn Pepon",
+            "cpf": "107-43-5829"
+        },
         "categoria": "moto",
-        "valorVenda": 7374,
-        "dataVenda": "2025-09-24T10:02:02Z",
-        "codigoVenda": "f71cf77e-1dc3-43ee-bbbc-8b2194c6046e",
-        "vendedorId": {
-            "$oid": "68e7c505fc13ae3b365fe6cc"
-        },
-        "_id": {
-            "$oid": "68e7c505fc13ae3b365fe6cd"
-        }
+        "valorVenda": 323.57,
+        "dataVenda": "2025-09-20T21:37:05Z",
+        "codigoVenda": "f62af9b7-ffe2-4c87-b04f-17e67fafc360"
     }, {
-        "cpfCliente": "258-40-7001",
+        "vendedorId": {
+            "$oid": "68e96e11fc13ae66a95fe59e"
+        },
+        "clienteId": {
+            "_id": {
+                "$oid": "68e96e11fc13ae66a95fe59f"
+            },
+            "nome": "Rasia Hagley",
+            "cpf": "894-46-2664"
+        },
         "categoria": "caminhao",
-        "valorVenda": 2832,
-        "dataVenda": "2025-09-15T20:25:23Z",
-        "codigoVenda": "35ff00e3-b165-4c48-92f0-5ab4190d5d6d",
-        "vendedorId": {
-            "$oid": "68e7c505fc13ae3b365fe6ce"
-        },
-        "_id": {
-            "$oid": "68e7c505fc13ae3b365fe6cf"
-        }
+        "valorVenda": 955.65,
+        "dataVenda": "2025-10-04T08:40:24Z",
+        "codigoVenda": "77cfd0e1-e3d6-4945-8eef-2684a8cd6a76"
     }, {
-        "cpfCliente": "240-45-2052",
+        "vendedorId": {
+            "$oid": "68e96e11fc13ae66a95fe5a0"
+        },
+        "clienteId": {
+            "_id": {
+                "$oid": "68e96e11fc13ae66a95fe5a1"
+            },
+            "nome": "Rabbi Harford",
+            "cpf": "260-57-6916"
+        },
         "categoria": "carro",
-        "valorVenda": 494,
-        "dataVenda": "2025-09-11T07:27:04Z",
-        "codigoVenda": "a8d61926-ed0c-4e24-8e36-3145e795002b",
-        "vendedorId": {
-            "$oid": "68e7c505fc13ae3b365fe6d0"
-        },
-        "_id": {
-            "$oid": "68e7c505fc13ae3b365fe6d1"
-        }
+        "valorVenda": 871.83,
+        "dataVenda": "2025-09-23T18:31:59Z",
+        "codigoVenda": "33e174cc-cd70-47e7-8c0c-bbe497a101a4"
     }, {
-        "cpfCliente": "678-61-6412",
+        "vendedorId": {
+            "$oid": "68e96e11fc13ae66a95fe5a2"
+        },
+        "clienteId": {
+            "_id": {
+                "$oid": "68e96e11fc13ae66a95fe5a3"
+            },
+            "nome": "Katha Row",
+            "cpf": "570-81-2990"
+        },
         "categoria": "seguro",
-        "valorVenda": 7531,
-        "dataVenda": "2025-09-22T14:40:34Z",
-        "codigoVenda": "0ee4a3e9-02fa-4518-95b3-6441a0d6efe0",
-        "vendedorId": {
-            "$oid": "68e7c505fc13ae3b365fe6d2"
-        },
-        "_id": {
-            "$oid": "68e7c505fc13ae3b365fe6d3"
-        }
+        "valorVenda": 908.9,
+        "dataVenda": "2025-09-07T13:34:36Z",
+        "codigoVenda": "76f89d4d-f39d-4524-9448-5c72451aba01"
     }, {
-        "cpfCliente": "885-26-7422",
+        "vendedorId": {
+            "$oid": "68e96e11fc13ae66a95fe5a4"
+        },
+        "clienteId": {
+            "_id": {
+                "$oid": "68e96e11fc13ae66a95fe5a5"
+            },
+            "nome": "Amandy Crossley",
+            "cpf": "864-58-3989"
+        },
         "categoria": "aviao",
-        "valorVenda": 5034,
-        "dataVenda": "2025-10-01T16:58:10Z",
-        "codigoVenda": "a36ae073-9f49-4ef3-bf6c-28433cab0b1f",
-        "vendedorId": {
-            "$oid": "68e7c505fc13ae3b365fe6d4"
-        },
-        "_id": {
-            "$oid": "68e7c505fc13ae3b365fe6d5"
-        }
+        "valorVenda": 590.3,
+        "dataVenda": "2025-10-09T10:49:42Z",
+        "codigoVenda": "0f06c6bc-af38-47f9-b434-851cc3f4f546"
     }, {
-        "cpfCliente": "435-45-1363",
-        "categoria": "aviao",
-        "valorVenda": 9527,
-        "dataVenda": "2025-10-01T04:14:41Z",
-        "codigoVenda": "1b3123e1-6e82-4fb3-b2cd-930023d585ac",
         "vendedorId": {
-            "$oid": "68e7c505fc13ae3b365fe6d6"
+            "$oid": "68e96e11fc13ae66a95fe5a6"
         },
-        "_id": {
-            "$oid": "68e7c505fc13ae3b365fe6d7"
-        }
+        "clienteId": {
+            "_id": {
+                "$oid": "68e96e11fc13ae66a95fe5a7"
+            },
+            "nome": "Lorianna Kilroy",
+            "cpf": "113-52-1721"
+        },
+        "categoria": "seguro",
+        "valorVenda": 344.85,
+        "dataVenda": "2025-10-01T15:33:38Z",
+        "codigoVenda": "b90222e7-6d74-40d9-a861-d416fc4ca3ad"
     }, {
-        "cpfCliente": "175-86-6053",
+        "vendedorId": {
+            "$oid": "68e96e11fc13ae66a95fe5a8"
+        },
+        "clienteId": {
+            "_id": {
+                "$oid": "68e96e11fc13ae66a95fe5a9"
+            },
+            "nome": "Minette Attle",
+            "cpf": "144-69-2550"
+        },
+        "categoria": "moto",
+        "valorVenda": 683.88,
+        "dataVenda": "2025-09-22T03:59:54Z",
+        "codigoVenda": "e2008dfd-35ac-4d6f-ae8e-4f8261324185"
+    }, {
+        "vendedorId": {
+            "$oid": "68e96e11fc13ae66a95fe5aa"
+        },
+        "clienteId": {
+            "_id": {
+                "$oid": "68e96e11fc13ae66a95fe5ab"
+            },
+            "nome": "Prentiss Kaesmakers",
+            "cpf": "281-32-0819"
+        },
+        "categoria": "moto",
+        "valorVenda": 682.06,
+        "dataVenda": "2025-09-08T06:14:56Z",
+        "codigoVenda": "e06b7ba1-26c9-4c8c-a444-614e08620868"
+    }, {
+        "vendedorId": {
+            "$oid": "68e96e11fc13ae66a95fe5ac"
+        },
+        "clienteId": {
+            "_id": {
+                "$oid": "68e96e11fc13ae66a95fe5ad"
+            },
+            "nome": "Irwinn Godball",
+            "cpf": "605-57-0518"
+        },
+        "categoria": "caminhao",
+        "valorVenda": 873.97,
+        "dataVenda": "2025-09-06T21:40:24Z",
+        "codigoVenda": "a0cd4ed2-5f7f-4d08-b8ea-c9bb7960e7c6"
+    }, {
+        "vendedorId": {
+            "$oid": "68e96e11fc13ae66a95fe5ae"
+        },
+        "clienteId": {
+            "_id": {
+                "$oid": "68e96e11fc13ae66a95fe5af"
+            },
+            "nome": "Dolores Penvarne",
+            "cpf": "124-73-0883"
+        },
         "categoria": "imobiliario",
-        "valorVenda": 1347,
-        "dataVenda": "2025-10-06T09:22:38Z",
-        "codigoVenda": "b2d4f159-cf26-4e15-bd3a-3b42d97457a6",
-        "vendedorId": {
-            "$oid": "68e7c505fc13ae3b365fe6d8"
-        },
-        "_id": {
-            "$oid": "68e7c505fc13ae3b365fe6d9"
-        }
+        "valorVenda": 26.99,
+        "dataVenda": "2025-09-01T03:42:03Z",
+        "codigoVenda": "cff2587b-4ea8-477c-a703-464241ea4f3f"
     }, {
-        "cpfCliente": "457-39-3193",
-        "categoria": "carro",
-        "valorVenda": 209,
-        "dataVenda": "2025-09-13T07:30:52Z",
-        "codigoVenda": "5691bc13-9f08-4677-9ea8-b0e533463967",
         "vendedorId": {
-            "$oid": "68e7c505fc13ae3b365fe6da"
+            "$oid": "68e96e11fc13ae66a95fe5b0"
         },
-        "_id": {
-            "$oid": "68e7c505fc13ae3b365fe6db"
-        }
+        "clienteId": {
+            "_id": {
+                "$oid": "68e96e11fc13ae66a95fe5b1"
+            },
+            "nome": "Cherilynn Brannigan",
+            "cpf": "819-51-0167"
+        },
+        "categoria": "aviao",
+        "valorVenda": 762.18,
+        "dataVenda": "2025-09-20T09:38:18Z",
+        "codigoVenda": "5c825a99-2592-44d4-88c8-aa776aa6845b"
+    }, {
+        "vendedorId": {
+            "$oid": "68e96e11fc13ae66a95fe5b2"
+        },
+        "clienteId": {
+            "_id": {
+                "$oid": "68e96e11fc13ae66a95fe5b3"
+            },
+            "nome": "Ferdinande Burnie",
+            "cpf": "303-74-5356"
+        },
+        "categoria": "moto",
+        "valorVenda": 296.08,
+        "dataVenda": "2025-09-20T07:36:31Z",
+        "codigoVenda": "54ab158b-efdb-4c7b-9fae-f612eba97d9d"
+    }, {
+        "vendedorId": {
+            "$oid": "68e96e11fc13ae66a95fe5b4"
+        },
+        "clienteId": {
+            "_id": {
+                "$oid": "68e96e11fc13ae66a95fe5b5"
+            },
+            "nome": "Domenic Wick",
+            "cpf": "432-37-4172"
+        },
+        "categoria": "moto",
+        "valorVenda": 166.6,
+        "dataVenda": "2025-09-08T13:06:03Z",
+        "codigoVenda": "52256b5d-9e83-442a-aa20-f54bee8b7485"
+    }, {
+        "vendedorId": {
+            "$oid": "68e96e11fc13ae66a95fe5b6"
+        },
+        "clienteId": {
+            "_id": {
+                "$oid": "68e96e11fc13ae66a95fe5b7"
+            },
+            "nome": "Ivan Orrey",
+            "cpf": "145-99-6288"
+        },
+        "categoria": "caminhao",
+        "valorVenda": 720.26,
+        "dataVenda": "2025-09-12T14:51:59Z",
+        "codigoVenda": "62466d32-8067-41aa-b3f7-fa5c2cbff245"
+    }, {
+        "vendedorId": {
+            "$oid": "68e96e11fc13ae66a95fe5b8"
+        },
+        "clienteId": {
+            "_id": {
+                "$oid": "68e96e11fc13ae66a95fe5b9"
+            },
+            "nome": "Sascha Bodocs",
+            "cpf": "679-34-9539"
+        },
+        "categoria": "carro",
+        "valorVenda": 24.71,
+        "dataVenda": "2025-10-05T22:54:43Z",
+        "codigoVenda": "5a70fc23-820d-48e6-b3b1-409652b8d1fa"
+    }, {
+        "vendedorId": {
+            "$oid": "68e96e11fc13ae66a95fe5ba"
+        },
+        "clienteId": {
+            "_id": {
+                "$oid": "68e96e11fc13ae66a95fe5bb"
+            },
+            "nome": "Sansone Shiliton",
+            "cpf": "171-17-0190"
+        },
+        "categoria": "imobiliario",
+        "valorVenda": 238.0,
+        "dataVenda": "2025-09-24T10:12:52Z",
+        "codigoVenda": "e441373c-c6e4-4d13-abc2-0ed852cc7ce3"
+    }, {
+        "vendedorId": {
+            "$oid": "68e96e11fc13ae66a95fe5bc"
+        },
+        "clienteId": {
+            "_id": {
+                "$oid": "68e96e11fc13ae66a95fe5bd"
+            },
+            "nome": "Jocelin Worcester",
+            "cpf": "541-33-9447"
+        },
+        "categoria": "carro",
+        "valorVenda": 658.16,
+        "dataVenda": "2025-10-04T04:30:02Z",
+        "codigoVenda": "b95cd98d-3f2e-4db9-8394-175740a60f64"
+    }, {
+        "vendedorId": {
+            "$oid": "68e96e11fc13ae66a95fe5be"
+        },
+        "clienteId": {
+            "_id": {
+                "$oid": "68e96e11fc13ae66a95fe5bf"
+            },
+            "nome": "Orelee Cerie",
+            "cpf": "133-88-8634"
+        },
+        "categoria": "moto",
+        "valorVenda": 908.16,
+        "dataVenda": "2025-09-28T23:50:17Z",
+        "codigoVenda": "90ab3134-dc83-4391-a95e-7b62aea19589"
+    }, {
+        "vendedorId": {
+            "$oid": "68e96e11fc13ae66a95fe5c0"
+        },
+        "clienteId": {
+            "_id": {
+                "$oid": "68e96e11fc13ae66a95fe5c1"
+            },
+            "nome": "Vassili Kedwell",
+            "cpf": "790-77-2483"
+        },
+        "categoria": "carro",
+        "valorVenda": 764.26,
+        "dataVenda": "2025-09-25T18:06:25Z",
+        "codigoVenda": "25e9e4e1-ec5a-4b4e-8da9-0818f267d39b"
+    }, {
+        "vendedorId": {
+            "$oid": "68e96e11fc13ae66a95fe5c2"
+        },
+        "clienteId": {
+            "_id": {
+                "$oid": "68e96e11fc13ae66a95fe5c3"
+            },
+            "nome": "Lucretia Caldairou",
+            "cpf": "877-89-2907"
+        },
+        "categoria": "carro",
+        "valorVenda": 63.99,
+        "dataVenda": "2025-10-05T02:45:30Z",
+        "codigoVenda": "3f304232-9222-41b0-865f-24aa5ae7ad62"
     }];
 }

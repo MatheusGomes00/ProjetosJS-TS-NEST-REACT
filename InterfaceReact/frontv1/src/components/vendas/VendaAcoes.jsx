@@ -1,8 +1,9 @@
-import {useState} from "react";
+import React, {useState} from "react";
 import {FaBars, FaEdit, FaTrash, FaWhatsapp} from "react-icons/fa";
 
 export const VendaAcoes = ({ venda, onEdit, onDelete }) => {
     const [open, setOpen] = useState(false);
+
     return (
         <td className={"px-4 py-2 flex justify-center relative"}>
             <div className={"relative"}
@@ -18,7 +19,7 @@ export const VendaAcoes = ({ venda, onEdit, onDelete }) => {
                         <button className="text-blue-600 hover:text-blue-800 relative group"
                                 onMouseDown={(e) => {
                                     e.stopPropagation()
-                                    onEdit(venda)
+                                    onEdit(venda);
                                 }}
                         >
                             <FaEdit />

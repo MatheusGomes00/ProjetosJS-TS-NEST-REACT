@@ -12,7 +12,7 @@ export const VendasModal = ({text, modalAction, onClose, venda}) => {
                  onClick={(e) => e.stopPropagation()}
             >
                 <Cabecalho text={text}/>
-                <ModalBody modalAction={modalAction} onClose={onClose} cliente={venda} />
+                <ModalBody modalAction={modalAction} onClose={onClose} venda={venda} />
             </div>
         </div>
     )
@@ -22,12 +22,13 @@ function ModalBody({modalAction, onClose, venda}) {
     const [sucesso, setSucesso] = useState(false);
     const formRef = useRef(null);
     const { pending } = useFormStatus();
+    //const { cliente, setCliente } = useFormStatus();
 
     return (
         <div className={"mt-4"}>
             <form ref={formRef}
                     action={async (formData) => {
-                        await modalAction(formData);
+                        await modalAction(formData, venda.codigoVenda);
                         setSucesso(true);
                         formRef.current?.reset();
                         setTimeout(() => {
@@ -36,14 +37,30 @@ function ModalBody({modalAction, onClose, venda}) {
                     }}
                     className={"flex flex-col gap-2 w-full max-w-md"}
             >
-                <label htmlFor="cpfCliente">CPF Cliente: </label>
-                <InputModal type="text" nome="cpfCliente" autoFocus defaultValue={venda?.cpfCliente || ""} />
+                <label htmlFor="nomeCliente">Nome Cliente: </label>
+                <InputModal id="nomeCliente" type="text" name="nomeCliente" autoFocus defaultValue={venda?.clienteId.nome || ""} />
 
-                <label htmlFor="categoria">Categoria: </label>
-                <InputModal type="text" name="categoria" id="categoria" defaultValue={venda?.categoria || ""} />
+                <label htmlFor="cpfCliente">CPF Cliente: </label>
+                <InputModal id="cpfCliente" type="text" name="cpfCliente" autoFocus defaultValue={venda?.clienteId.cpf || ""} />
 
                 <label htmlFor="valorVenda">Valor: </label>
-                <InputModal type="text" name="valorVenda" id="valorVenda" defaultValue={venda?.valorVenda || ""} />
+                <InputModal type="number" name="valorVenda" id="valorVenda" defaultValue={venda?.valorVenda || ""} />
+
+                <label htmlFor="categoria">Categoria: </label>
+                <select id="categoria" name="categoria" required className={"p-2 rounded-md text-black bg-gray-200"}>
+                    <option defaultValue={venda?.categoria || ""}>{venda?.categoria || ""}</option>
+                    <option value="carro">Carro</option>
+                    <option value="moto">Moto</option>
+                    <option value="imobiliario">Imobiliario</option>
+                    <option value="caminhao">Caminão</option>
+                    <option value="aviao">Avião</option>
+                    <option value="seguro">Seguro</option>
+                </select>
+                <label htmlFor="observacoes">Observações </label>
+                <textarea name="observacoes" id="observacoes"
+                          defaultValue={venda?.observacoes || ""}
+                          className={"p-2 rounded-md bg-gray-200 text-black focus:outline-none focus:ring-2 focus:ring-gray-800 w-full h-24 resize-none"}
+                />
 
                 {sucesso && (
                     <div className={"flex flex-col items-center mt-2 animate-fade-in"}>

@@ -10,6 +10,7 @@ import {buscarVenda, handleNovaVenda} from "../../services/VendaService.js";
 import {FiltroCategoriaVenda} from "../../components/ui/filtroSection.jsx";
 import {VendasTable} from "../../components/vendas/VendasTable.jsx";
 import {Pagination} from "../../components/ui/paginacao.jsx";
+import {handleDeletarVenda, handleEditarVenda} from "../../services/VendaService.js";
 
 
 const Vendas = () => {
@@ -18,6 +19,8 @@ const Vendas = () => {
     const [totalPage, setTotalPage] = useState(0);
     const [filtroCategoria, setFiltroCategoria] = useState("");
     const [showModalVenda, setShowModalVenda] = useState(false);
+    const [vendaSelecionada, setVendaSelecionada] = useState();
+
 
     const listarVendas = async () => {
         //const response = await handleBuscarVendas();
@@ -44,10 +47,6 @@ const Vendas = () => {
         setVendas(response.data);
         setTotalPage(response.pagination.totalPages);
     }
-
-
-    const handleEditarVenda = (venda) => console.log("Editar:", venda.codigoVenda);
-    const handleDeletarVenda = (venda) => console.log("Excluir:", venda.codigoVenda);
 
     return (
         <div className={"p-6"}>
@@ -79,9 +78,19 @@ const Vendas = () => {
             <div>
                 <VendasTable
                     vendas={vendas}
-                    onEdit={handleEditarVenda}
                     onDelete={handleDeletarVenda}
+                    onEdit={(venda) => {
+                        setVendaSelecionada(venda);
+                        setShowModalVenda(true);
+                    }}
                 />
+                {showModalVenda && createPortal(
+                    <VendasModal text={"Editar venda"} modalAction={handleEditarVenda}
+                                 onClose={() => setShowModalVenda(false)}
+                                 venda={vendaSelecionada}
+                    />,
+                    document.getElementById('modal-root')
+                )}
                 <Pagination
                     currentPage={currentPage}
                     totalPages={totalPage}
