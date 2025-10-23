@@ -63,10 +63,13 @@ export const clientes_mock2 = (page, pageSize) => {
     };
 }
 
-export const clientes_mock3 = (page, pageSize) => {
-    const totalItems = 25;
-    const listaClientes = ListaClientes();
+export const clientes_mock3 = (page, pageSize, filtroOpt) => {
+    let listaClientes = ListaClientes();
     listaClientes.sort((a, b) => a.nome.localeCompare(b.nome, "pt-BR"));
+    if(filtroOpt){
+        listaClientes = listaClientes.filter((cliente) => cliente.status === filtroOpt)
+    }
+    const totalItems = listaClientes.length;
     const totalPages = Math.ceil(totalItems / pageSize);
     const start = (page -1) * pageSize;
     const end = start + pageSize;

@@ -2,8 +2,7 @@ import React, {useEffect, useState} from "react";
 import {vendasMock} from "../../mocks/vendasMock.js";
 import {Cabecalho} from "../../components/ui/heading.jsx";
 import {SearchBar} from "../../components/ui/barraPesquisa.jsx";
-import {BlueButton} from "../../components/ui/buttons.jsx";
-import vendasImg from "../../assets/vendas1.svg";
+import {VendaButton} from "../../components/ui/buttons.jsx";
 import {createPortal} from "react-dom";
 import {VendasModal} from "../../components/vendas/VendasModal.jsx";
 import {buscarVenda, handleNovaVenda} from "../../services/VendaService.js";
@@ -18,7 +17,8 @@ const Vendas = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [totalPage, setTotalPage] = useState(0);
     const [filtroCategoria, setFiltroCategoria] = useState("");
-    const [showModalVenda, setShowModalVenda] = useState(false);
+    const [showModalAdicionarVenda, setShowModalAdicionarVenda] = useState(false);
+    const [showModalEditarVenda, setShowModalEditarVenda] = useState(false);
     const [vendaSelecionada, setVendaSelecionada] = useState();
 
 
@@ -36,9 +36,9 @@ const Vendas = () => {
     }, [currentPage]);
 
     useEffect(() => {
-        const mock = vendasMock(currentPage, 10);
-        const filtradas = mock.data.filter((venda) => filtroCategoria === "" || venda.categoria === filtroCategoria);
-        setVendas(filtradas);
+        const mock = vendasMock(currentPage, 10, filtroCategoria);
+        // const filtradas = mock.data.filter((venda) => filtroCategoria === "" || venda.categoria === filtroCategoria);
+        setVendas(mock.data);
         setTotalPage(mock.pagination.totalPages)
     }, [currentPage, filtroCategoria]);
 
@@ -56,13 +56,10 @@ const Vendas = () => {
                                busca={handleBuscarVenda}
                                voltarLista={listarVendas}
                     />
-                    <BlueButton onClick={() => setShowModalVenda(true)}>
-                        <img src={vendasImg} className="w-14 h-14"  alt={"icone venda"} />
-                        Nova Venda
-                    </BlueButton>
-                    {showModalVenda && createPortal(
+                    <VendaButton onClick={() => setShowModalAdicionarVenda(true)}/>
+                    {showModalAdicionarVenda && createPortal(
                         <VendasModal text={"Registrar venda"} modalAction={handleNovaVenda}
-                                      onClose={() => setShowModalVenda(false)}
+                                      onClose={() => setShowModalAdicionarVenda(false)}
                         />,
                         document.getElementById('modal-root')
                     )}
@@ -81,12 +78,15 @@ const Vendas = () => {
                     onDelete={handleDeletarVenda}
                     onEdit={(venda) => {
                         setVendaSelecionada(venda);
-                        setShowModalVenda(true);
+                        setShowModalEditarVenda(true);
                     }}
                 />
-                {showModalVenda && createPortal(
+                {showModalEditarVenda && createPortal(
                     <VendasModal text={"Editar venda"} modalAction={handleEditarVenda}
-                                 onClose={() => setShowModalVenda(false)}
+                                 onClose={() => {
+                                    setVendaSelecionada(null);
+                                    setShowModalEditarVenda(false);
+                                }}
                                  venda={vendaSelecionada}
                     />,
                     document.getElementById('modal-root')

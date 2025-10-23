@@ -35,9 +35,9 @@ const Clientes = () => {
 
 
     useEffect(() => {
-        const mock = clientes_mock3(currentPage, 10);
-        const filtrados = mock.data.filter((cliente) => statusFiltro === "" || cliente.status === statusFiltro);
-        setClientes(filtrados);
+        const mock = clientes_mock3(currentPage, 10, statusFiltro);
+        // const filtrados = mock.data.filter((cliente) => statusFiltro === "" || cliente.status === statusFiltro);
+        setClientes(mock.data);
         setTotalPage(mock.pagination.totalPages)
     }, [currentPage, statusFiltro]);
 

@@ -22,10 +22,7 @@ const Home = () => {
             <CardMeta title={"Meta mensal"} valorAtual={5300} meta={10000}/>
 
             <div className={"flex flex-col items-center justify-center gap-4"}>
-                <GreenButton onClick={handleNovaVenda}>
-                    <img src={vendasImg} className="w-16 h-16"  alt={"icone da vendas"} />
-                    Nova Venda
-                </GreenButton>
+                <VendaButton onClick={handleNovaVenda}/>
                 <BlueButton onClick={() => setShowModalCliente(true)}>
                     <img src={clientesImg} className="w-16 h-16"  alt={"icone cliente"} />
                     Novo Cliente

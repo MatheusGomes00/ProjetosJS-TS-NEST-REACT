@@ -4,34 +4,46 @@ import {useFormStatus} from "react-dom";
 import {InputModal} from "../clientes/ClienteModal.jsx";
 
 export const VendasModal = ({text, modalAction, onClose, venda}) => {
+    const formRef = useRef(null);
+
     return (
         <div className={"fixed inset-0 flex items-center justify-center bg-black/50 z-50"}
-             onClick={onClose}
+            onClick={() => {
+                formRef.current?.reset();
+                onClose();
+            }}
         >
             <div className={"bg-gray-600 text-gray-200 rounded-2xl shadow-lg w-full max-w-lg p-6 relative"}
-                 onClick={(e) => e.stopPropagation()}
+                onClick={(e) => e.stopPropagation()}
             >
                 <Cabecalho text={text}/>
-                <ModalBody modalAction={modalAction} onClose={onClose} venda={venda} />
+                <ModalBody modalAction={modalAction} venda={venda}
+                    onClose={() => {
+                        formRef.current?.reset();
+                        onClose();
+                    }}
+                    formRef={formRef}
+                />
             </div>
         </div>
     )
 }
 
-function ModalBody({modalAction, onClose, venda}) {
+function ModalBody({modalAction, onClose, venda, formRef}) {
     const [sucesso, setSucesso] = useState(false);
-    const formRef = useRef(null);
     const { pending } = useFormStatus();
-    //const { cliente, setCliente } = useFormStatus();
 
     return (
         <div className={"mt-4"}>
             <form ref={formRef}
                     action={async (formData) => {
-                        await modalAction(formData, venda.codigoVenda);
+                        if(venda?.codigoVenda){
+                            formData.append("codigoVenda", venda.codigoVenda);
+                        }
+                        await modalAction(formData);
                         setSucesso(true);
-                        formRef.current?.reset();
                         setTimeout(() => {
+                            formRef.current?.reset();
                             setSucesso(false);
                         }, 3000);
                     }}
@@ -41,10 +53,10 @@ function ModalBody({modalAction, onClose, venda}) {
                 <InputModal id="nomeCliente" type="text" name="nomeCliente" autoFocus defaultValue={venda?.clienteId.nome || ""} />
 
                 <label htmlFor="cpfCliente">CPF Cliente: </label>
-                <InputModal id="cpfCliente" type="text" name="cpfCliente" autoFocus defaultValue={venda?.clienteId.cpf || ""} />
+                <InputModal id="cpfCliente" type="text" name="cpfCliente" defaultValue={venda?.clienteId.cpf || ""} />
 
                 <label htmlFor="valorVenda">Valor: </label>
-                <InputModal type="number" name="valorVenda" id="valorVenda" defaultValue={venda?.valorVenda || ""} />
+                <InputModal type="number" name="valorVenda" id="valorVenda" step="0.01" defaultValue={venda?.valorVenda || ""} />
 
                 <label htmlFor="categoria">Categoria: </label>
                 <select id="categoria" name="categoria" required className={"p-2 rounded-md text-black bg-gray-200"}>
@@ -71,7 +83,12 @@ function ModalBody({modalAction, onClose, venda}) {
                         className="bg-gray-800 hover:bg-blue-700 text-gray-200 font-semibold rounded gap-2 mt-4">
                     {pending ? "Salvando..." : "Salvar"}
                 </button>
-                <button type="button" onClick={onClose} disabled={pending}
+                <button type="button" 
+                        onClick={() => { 
+                            formRef.current?.reset();
+                            onClose();
+                        }} 
+                        disabled={pending}
                         className={"bg-gray-800 hover:bg-gray-400 text-gray-200 font-semibold rounded gap-2"}>
                     Cancelar
                 </button>

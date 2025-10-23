@@ -38,7 +38,7 @@ export async function buscarVenda(valorBusca){
     }
 }
 
-export async function handleEditarVenda(formData, codigoVenda) {
+export async function handleEditarVenda(formData) {
     // const venda = {
     //     cpfCliente: formData.get("cpfCliente"),
     //     categoria: formData.get("categoria"),
@@ -54,7 +54,7 @@ export async function handleEditarVenda(formData, codigoVenda) {
     // return response.json();
     // return JSON.stringify(venda);
 
-    console.log("Editando venda código:", codigoVenda);
+    console.log("Editando venda código:", JSON.stringify(formData.get("codigoVenda")));
 }
 
 export async function handleDeletarVenda(venda) {

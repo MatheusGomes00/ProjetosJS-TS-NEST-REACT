@@ -18,9 +18,9 @@ export const ClienteModal = ({text, modalAction, onClose, cliente}) => {
     )
 }
 
-export function InputModal({type, name, id, defaultValue, autoFocus}) {
+export function InputModal({type, step, name, id, defaultValue, autoFocus}) {
     return (
-        <input type={type} name={name} id={id} defaultValue={defaultValue} autoFocus={autoFocus} required
+        <input type={type} step={step} name={name} id={id} defaultValue={defaultValue} autoFocus={autoFocus} required
                className={"p-2 rounded-md bg-gray-200 text-black focus:outline-none focus:ring-2 focus:ring-gray-800"}/>
     );
 }
