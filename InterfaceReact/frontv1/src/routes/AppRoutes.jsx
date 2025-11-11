@@ -8,7 +8,7 @@ import Vendas from '../pages/Vendas/vendas';
 
 export default function AppRoutes() {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename='sales-track'>
             <Routes>
                 <Route path="/" element={<Layout />} >
                     <Route index element={<Navigate to="/home" replace={true}/> } />
