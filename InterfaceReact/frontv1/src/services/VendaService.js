@@ -1,4 +1,4 @@
-export async function salvarVenda(formData, vendedorId) {
+export async function salvarVenda(formData) {
     const novaVenda = {
         cpfCliente: formData.get("cpfCliente"),
         categoria: formData.get("categoria"),
