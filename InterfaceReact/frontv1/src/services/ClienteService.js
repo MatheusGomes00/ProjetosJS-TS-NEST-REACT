@@ -1,6 +1,7 @@
 export async function salvarCliente(formData) {
     const novoCliente = {
         nome: formData.get("nome"),
+        cpf: formData.get("cpf"),
         email: formData.get("email"),
         telefono: formData.get("telefone"),
         endereco: {
@@ -37,4 +38,8 @@ export async function buscarCliente(nome) {
             "totalItems": 1
         }
     }
+}
+
+export async function handleEditarCliente(formData) {
+    console.log("Editando cliente CPF: ", JSON.stringify(formData.get("cpf")));
 }

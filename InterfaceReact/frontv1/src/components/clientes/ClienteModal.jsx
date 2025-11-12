@@ -4,15 +4,25 @@ import {useFormStatus} from "react-dom";
 
 
 export const ClienteModal = ({text, modalAction, onClose, cliente}) => {
+    const formRef = useRef(null);
     return (
         <div className={"fixed inset-0 flex items-center justify-center bg-black/50 z-50"}
-             onClick={onClose}
+             onClick={() => {
+                formRef.current?.reset();
+                onClose()
+            }}
         >
             <div className={"bg-gray-600 text-gray-200 rounded-2xl shadow-lg w-full max-w-lg p-6 relative"}
                  onClick={(e) => e.stopPropagation()}
             >
                 <Cabecalho text={text}/>
-                <ModalBody modalAction={modalAction} onClose={onClose} cliente={cliente} />
+                <ModalBody modalAction={modalAction} cliente={cliente} 
+                    onClose={() => {
+                        formRef.current?.reset();
+                        onClose()
+                    }}
+                    formRef={formRef}
+                />
             </div>
         </div>
     )
@@ -25,26 +35,29 @@ export function InputModal({type, step, name, id, defaultValue, autoFocus}) {
     );
 }
 
-function ModalBody({modalAction, onClose, cliente}) {
+function ModalBody({modalAction, onClose, cliente, formRef}) {
     const [sucesso, setSucesso] = useState(false);
-    const formRef = useRef(null);
     const { pending } = useFormStatus();
 
     return (
         <div className={"mt-4"}>
             <form ref={formRef}
-                  action={async (formData) => {
-                      await modalAction(formData);
-                      setSucesso(true);
-                      formRef.current?.reset();
-                      setTimeout(() => {
-                          setSucesso(false);
-                      }, 3000);
-                  }}
-                  className={"flex flex-col gap-2 w-full max-w-md"}>
-
+                action={async (formData) => {
+                    await modalAction(formData);
+                    setSucesso(true);
+                    formRef.current?.reset();
+                    setTimeout(() => {
+                        setSucesso(false);
+                    }, 3000);
+                }}
+                className={"flex flex-col gap-2 w-full max-w-md"}
+            >
                 <label htmlFor="nome">Nome: </label>
                 <InputModal type="text" name="nome" id="nome" autoFocus defaultValue={cliente?.nome || ""}  />
+
+                <label htmlFor="cpf">CPF: </label>
+                <InputModal type="text" name="cpf" id="cpf" autoFocus defaultValue={cliente?.cpf || ""}  />
+
 
                 <label htmlFor="email">Email: </label>
                 <InputModal type="text" name="email" id="email" defaultValue={cliente?.email || ""} />
@@ -75,7 +88,12 @@ function ModalBody({modalAction, onClose, cliente}) {
                         className="bg-gray-800 hover:bg-blue-700 text-gray-200 font-semibold rounded gap-2 mt-4">
                     {pending ? "Salvando..." : "Salvar"}
                 </button>
-                <button type="button" onClick={onClose} disabled={pending}
+                <button type="button" 
+                        onClick={() => {
+                            formRef.current?.reset();    
+                            onClose();
+                        }} 
+                        disabled={pending}
                         className={"bg-gray-800 hover:bg-gray-400 text-gray-200 font-semibold rounded gap-2"}>
                     Cancelar
                 </button>
