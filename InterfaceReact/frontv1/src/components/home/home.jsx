@@ -1,12 +1,12 @@
-import {CardInfo, CardMeta} from "../../components/ui/cards.jsx";
-import {BlueButton, VendaButton} from "../../components/ui/buttons.jsx";
+import {CardInfo, CardMeta} from "../ui/cards.jsx";
+import {BlueButton, VendaButton} from "../ui/buttons.jsx";
 import clientesImg from "../../assets/clientes1.svg";
 import React, {useState} from "react";
 import {createPortal} from "react-dom";
-import {ClienteModal} from "../../components/clientes/ClienteModal.jsx";
+import {ClienteModal} from "../clientes/ClienteModal.jsx";
 import {handleNovoCliente} from "../../services/ClienteService.js";
 import {handleNovaVenda} from "../../services/VendaService.js";
-import {VendasModal} from "../../components/vendas/VendasModal.jsx";
+import {VendasModal} from "../vendas/VendasModal.jsx";
 
 
 

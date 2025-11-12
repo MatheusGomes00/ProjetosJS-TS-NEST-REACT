@@ -1,14 +1,14 @@
 import React, {useEffect, useState} from "react";
 import {vendasMock} from "../../mocks/vendasMock.js";
-import {Cabecalho} from "../../components/ui/heading.jsx";
-import {SearchBar} from "../../components/ui/barraPesquisa.jsx";
-import {VendaButton} from "../../components/ui/buttons.jsx";
+import {Cabecalho} from "../ui/heading.jsx";
+import {SearchBar} from "../ui/barraPesquisa.jsx";
+import {VendaButton} from "../ui/buttons.jsx";
 import {createPortal} from "react-dom";
-import {VendasModal} from "../../components/vendas/VendasModal.jsx";
+import {VendasModal} from "./VendasModal.jsx";
 import {buscarVenda, handleNovaVenda} from "../../services/VendaService.js";
-import {FiltroCategoriaVenda} from "../../components/ui/filtroSection.jsx";
-import {VendasTable} from "../../components/vendas/VendasTable.jsx";
-import {Pagination} from "../../components/ui/paginacao.jsx";
+import {FiltroCategoriaVenda} from "../ui/filtroSection.jsx";
+import {VendasTable} from "./VendasTable.jsx";
+import {Pagination} from "../ui/paginacao.jsx";
 import {handleDeletarVenda, handleEditarVenda} from "../../services/VendaService.js";
 
 

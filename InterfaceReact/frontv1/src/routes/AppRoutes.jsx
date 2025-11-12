@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import Home from '../pages/Home/home';
-import Layout from '../components/layout/Layout.jsx'
-import Clientes from '../pages/Clientes/clientes';
-import Perfil from '../pages/Perfil/perfil.jsx';
-import Metas from '../pages/Metas/metas';
-import Vendas from '../pages/Vendas/vendas';
+import Home from '../components/home/home';
+import Layout from '../components/layout/Layout.jsx';
+import Clientes from '../components/clientes/clientes';
+import Perfil from '../components/perfil/perfil.jsx';
+import Metas from '../components/metas/metas';
+import Vendas from '../components/vendas/vendas';
 
 export default function AppRoutes() {
     return (
