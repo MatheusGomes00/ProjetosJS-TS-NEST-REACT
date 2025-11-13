@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import {vendasMock} from "../../mocks/vendasMock.js";
 import {Cabecalho} from "../ui/heading.jsx";
 import {SearchBar} from "../ui/barraPesquisa.jsx";
-import {VendaButton} from "../ui/buttons.jsx";
+import {VendaButton, GrayButton} from "../ui/buttons.jsx";
 import {createPortal} from "react-dom";
 import {VendasModal} from "./VendasModal.jsx";
 import {buscarVenda, handleNovaVenda} from "../../services/VendaService.js";
@@ -64,13 +64,19 @@ const Vendas = () => {
                         document.getElementById('modal-root')
                     )}
                 </div>
-                <FiltroCategoriaVenda
-                    selectedCategoria={filtroCategoria}
-                    onChange={(e) => {
-                        setFiltroCategoria(e.target.value);
-                        setCurrentPage(1)
-                    }}
-                />
+                <div  className={"flex flex-row justify-between p-4 bg-gray-700 text-gray-200 text-sm font-bold rounded-md shadow-sm"}>
+                    <FiltroCategoriaVenda
+                        selectedCategoria={filtroCategoria}
+                        onChange={(e) => {
+                            setFiltroCategoria(e.target.value);
+                            setCurrentPage(1)
+                        }}
+                    />
+                    <GrayButton onClick={() => console.log("Gerando relatório")}>
+                        Gerar Relatório
+                    </GrayButton>
+                </div>
+                
             </Cabecalho>
             <div>
                 <VendasTable

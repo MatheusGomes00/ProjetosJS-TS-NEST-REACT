@@ -12,6 +12,17 @@ export const BlueButton = ({ onClick, children}) => {
     )
 }
 
+export const GrayButton = ({ onClick, children}) => {
+    return (
+        <button
+            onClick={onClick}
+            className="bg-gray-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded flex items-center gap-2"
+        >
+            {children}
+        </button>
+    )
+}
+
 export const VendaButton = ({ onClick}) => {
     return (
         <button

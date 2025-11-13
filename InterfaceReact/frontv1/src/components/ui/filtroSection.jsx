@@ -23,7 +23,7 @@ export function FiltroClienteStatus({selectedStatus, onChange}) {
 
 export function FiltroCategoriaVenda({selectedCategoria, onChange}) {
     return (
-        <div className={"flex flex-row items-center p-4 bg-gray-700 text-gray-200 text-sm font-bold rounded-md shadow-sm"}>
+        <div>
             <label htmlFor={"categoriaVenda"} className={"mr-2"}>
                 Filtrar por categoria:
             </label>
