@@ -14,7 +14,7 @@ export const SearchBar = ({ text, busca, voltarLista }) => {
         setValorBusca('');
         setBuscando(false);
         await voltarLista();
-    }
+    };
     return (
         <form onSubmit={handleSubmit}
               className="flex items-center w-1/2 shadow-sm rounded-full overflow-hidden border-gray-300 bg-gray-200">
@@ -40,5 +40,5 @@ export const SearchBar = ({ text, busca, voltarLista }) => {
                 </button>
             )}
         </form>
-    )
+    );
 }

@@ -58,7 +58,6 @@ function ModalBody({modalAction, onClose, cliente, formRef}) {
                 <label htmlFor="cpf">CPF: </label>
                 <InputModal type="text" name="cpf" id="cpf" autoFocus defaultValue={cliente?.cpf || ""}  />
 
-
                 <label htmlFor="email">Email: </label>
                 <InputModal type="text" name="email" id="email" defaultValue={cliente?.email || ""} />
 

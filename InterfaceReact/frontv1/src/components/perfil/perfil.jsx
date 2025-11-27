@@ -1,10 +1,10 @@
 import React from 'react';
+import { Cabecalho } from '../ui/heading';
 
 const Perfil = () => {
     return (
-        <div>
-            Conteúdo da página cadastro em desenvolvimento
-        </div>
+        <Cabecalho text="Perfil Vendedor"/>
+        
     );
 };
 
